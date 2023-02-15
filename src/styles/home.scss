@@ -1,0 +1,7 @@
+.home{
+    margin-top: 3.2rem;
+    padding: .5rem 3rem;
+    @media screen and  (max-width: 650px) {
+        padding: .5rem 1rem;
+    }
+}

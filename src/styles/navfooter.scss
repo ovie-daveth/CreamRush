@@ -1,0 +1,175 @@
+.header{
+    display:  flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: .6rem 3rem;
+    @media screen and (max-width: 650px) {
+        padding: .6rem 1rem;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @media screen and (max-width: 800px) {
+            gap: 5px;
+        }
+        h1{
+            font-size: 18px;
+            @media screen and (max-width: 800px) {
+                font-size: 15px;
+            }
+        }
+    }
+   .menu{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    @media screen and (max-width: 800px) {
+        gap: .6rem;
+    }
+    .menu_close{
+        display: none;
+        @media screen and (max-width: 580px) {
+            display: block;
+        }
+    }
+    .menu_item{
+        li{
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5rem;
+            cursor: pointer;
+            transition: color .4s ease-in-out;
+            @media screen and (max-width: 880px) {
+                margin-left: 1.2rem;
+            }
+            a{
+                color: black;
+            }
+            &:hover{
+                a{
+                    color: rgb(83, 82, 82);
+                }
+            }
+        }
+    @media screen and (max-width: 580px) {
+        transform: translate(150%);
+        transition: all .4s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        gap: 4rem;
+        top: 3.2rem;
+        right: 0;
+        background-color: #eee;
+        width: 300px;
+        height: 100vh;
+        padding: 1.4rem 2rem;
+    }
+    }
+    @media screen and (max-width: 580px) {
+        .show{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            gap: 4rem;
+            top: 3.2rem;
+            right: 0;
+            background-color: #eee;
+            width: 300px;
+            height: 100vh;
+            padding: 1.4rem 2rem;
+            transform: translate(0);
+            transition: all .4s ease-in-out;
+            li{
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 5rem;
+                cursor: pointer;
+                transition: color .4s ease-in-out;
+                @media screen and (max-width: 880px) {
+                    margin-left: 1.2rem;
+                }
+                a{
+                    color: black;
+                }
+                &:hover{
+                    a{
+                        color: rgb(83, 82, 82);
+                    }
+                }
+            }
+        }
+    }
+   
+    .menu_icons{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-left: 10px;
+        cursor: pointer;
+        .cart{
+            color: black;
+            position: relative;
+            
+            .addToCart{
+                position: absolute;
+                color: #fff;
+                top: -10px;
+                right: -8px;
+                font-size: 10px;
+                background-color: red;
+                width: 14px;
+                height: 14px;
+                align-items: center;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+
+            }
+        }
+        .profile{
+            position: relative;
+            &:hover{
+                .sub_profile{
+                    display: flex;
+                }
+            }
+            .sub_profile{
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+                position: absolute;
+                top: 2.3rem; right: -15px;
+                width: 180px;
+                padding: 2rem 2.1rem;
+                background-color: #eee;
+                p{
+                    a{
+                        font-size: 14px;
+                        &:hover{
+                            color: rgb(105, 99, 99);
+                        }
+                    }
+                }
+                button{
+                    background-color: #fff;
+                    border-radius: 10px;
+                    border: none;
+                    padding: .5rem 0;
+                    width: 100%;
+                    font-size: 14px;
+                    &:hover{
+                        color:rgb(105, 99, 99);
+                    }
+                }
+            }
+        }
+    }
+   }
+}
